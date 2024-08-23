@@ -44,12 +44,15 @@ export type TodoItem = {
     <a routerLink="../expected">Show expected outcome</a>
     
     <form style="padding-top: 1rem">
-        <input type="text" placeholder="Task Name"/>
+        <label>Task Name:
+            <input type="text" placeholder="Task Name"/>
+        </label>
         <button type="button">Add</button>
     </form>
 
+    <h4>N remaining out of X Tasks</h4>
+    
     <section #Todos>
-      <h4>N remaining out of X Tasks</h4>
       <h1>Tasks List</h1>
       <ul>
         <li>Dummy Item (it should be deleted when implementing this task)</li>
