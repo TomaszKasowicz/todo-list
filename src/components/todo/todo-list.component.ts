@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Component, ChangeDetectionStrategy, signal } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 
@@ -62,6 +62,6 @@ export type TodoItem = {
     `
 })
 export class TodoListComponent {
-    items: TodoItem[] = [];
+    items = signal<TodoItem[]>([]);
 }
 //---------------------------------------------------------------------
