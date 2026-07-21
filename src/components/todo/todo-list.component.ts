@@ -37,7 +37,6 @@ export type TodoItem = {
 //------------------------- TODO LIST COMPONENT -----------------------
 @Component({
     selector: 'app-todo-list',
-    standalone: true,
     imports: [RouterLink],
     styles: [`.done { text-decoration: line-through;}`],
     template: `
