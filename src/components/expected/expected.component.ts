@@ -1,8 +1,9 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 @Component({
     imports: [RouterLink],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <a routerLink="../todo-list">Back to Todo List Component</a>
     <h2>Expected Outcome</h2>
