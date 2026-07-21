@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { RouterLink } from "@angular/router";
 
 
@@ -37,9 +37,9 @@ export type TodoItem = {
 //------------------------- TODO LIST COMPONENT -----------------------
 @Component({
     selector: 'app-todo-list',
-    standalone: true,
     imports: [RouterLink],
     styles: [`.done { text-decoration: line-through;}`],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <a routerLink="../expected">Show expected outcome</a>
     
