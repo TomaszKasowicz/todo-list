@@ -8,8 +8,10 @@ import { routes } from './app.routes';
     imports: [RouterOutlet],
     changeDetection: ChangeDetectionStrategy.Eager,
     template: `
-    <h1>TODO List</h1>
-    <router-outlet/>
+    <main>
+      <h1>TODO List</h1>
+      <router-outlet/>
+    </main>
   `
 })
 export class App {

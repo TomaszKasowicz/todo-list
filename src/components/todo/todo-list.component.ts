@@ -40,26 +40,7 @@ export type TodoItem = {
     imports: [RouterLink],
     styles: [`.done { text-decoration: line-through;}`],
     changeDetection: ChangeDetectionStrategy.Eager,
-    template: `
-    <a routerLink="../expected">Show expected outcome</a>
-    
-    <form style="padding-top: 1rem">
-        <label>Task Name:
-            <input type="text" placeholder="Task Name"/>
-        </label>
-        <button type="button">Add</button>
-    </form>
-
-    <h4>N remaining out of X Tasks</h4>
-    
-    <section #Todos>
-      <h1>Tasks List</h1>
-      <ul>
-        <li>Dummy Item (it should be deleted when implementing this task)</li>
-        <li class="done">Dummy Done Item</li>
-      </ul>
-    </section>
-    `
+    templateUrl: 'todo-list.component.html'
 })
 export class TodoListComponent {
     items = signal<TodoItem[]>([]);
